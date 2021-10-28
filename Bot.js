@@ -2,7 +2,7 @@
 Telegram Bot for acces control in Covid-19 situation.
 Created by Jaime F.M.
 Nov 28 , 2021 
-https://github.com/
+https://github.com/Jaimefermar/Telegram_Bot_Covid
 This code is released under the [MIT License](http://opensource.org/licenses/MIT).
 Please review the LICENSE.md file included with this example. If you have any questions 
 or concerns with licensing, please contact jaime.fermar01@gmail.com 
