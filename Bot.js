@@ -334,6 +334,18 @@ function deleteOldUsers(){
   } 
 }
 
+function deleteAllUsers(){      //This function autoexecutes itself before the day has ended 
+  var sheet = SpreadsheetApp.openById(ssId).getSheetByName("Registrados"); //Open the Registrados sheet
+  var registrados = sheet.getLastRow(); //Get the number of registered people right now 
+  for (var i = 1; i < registrados+1;  i++) { //Delete users one by one, registering the exit
+    var sheet = SpreadsheetApp.openById(ssId).getSheetByName("Registrados"); //Update the sheet for the new order
+    var name = sheet.getRange(1,2).getValue();
+    var id = sheet.getRange(1,3).getValue();
+    sendText(id,"Hola, soy el bot del Eco. Creo que estas no son horas de seguir en el Eco y te voy a expulsar, gracias por la confianza.");
+    salida(id,name);
+  } 
+}
+
 function cargarControlAcceso(id){
   Utilities.sleep(500);
   var destino = SpreadsheetApp.openById(ssId).getSheetByName("Control Acceso");
